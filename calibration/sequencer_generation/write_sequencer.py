@@ -24,12 +24,12 @@ parser.add_argument('--filename', type=str, default=None)
 parser.add_argument('--default-file', type=str, default='astroskipper_sequencer_default.xml')
 
 # REQUIRED ARGS #
-parser.add_argument('--center', type=coords, dest="center", nargs="+", default=[0,0]) # unit x_ncols
+parser.add_argument('--center', type=coords, dest="center", nargs="+", default=[0,0]) # unit colcluster 
 								  # length of centers defines number of ROIs
 parser.add_argument('--width', type=int, nargs="*", default=[2]) # unit x_ncols
 parser.add_argument('--height', type=int, nargs="*", default=[2]) # unit x_nrows
 
-logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
+logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.INFO)
 
 args = parser.parse_args()
 vardict = vars(args)
